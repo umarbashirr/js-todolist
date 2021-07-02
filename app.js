@@ -139,6 +139,7 @@ function addNewTodo() {
   for (let i = 0; i < deleteButton.length; i++) {
     deleteButton[i].addEventListener('click', function () {
       this.parentElement.parentElement.remove();
+      displayAlert('danger', 'Task Deleted Successfully');
     });
   }
 
@@ -152,6 +153,7 @@ function addNewTodo() {
         'line-through'
       );
       this.parentElement.parentElement.style.textDecoration = 'line-through';
+      displayAlert('success', 'Task Marked Completed');
     });
   }
 }
